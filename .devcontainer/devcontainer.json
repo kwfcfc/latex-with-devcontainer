@@ -1,5 +1,5 @@
 {
-  "image": "mcr.microsoft.com/vscode/devcontainers/base:debian-11",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:debian-13",
   "name": "LaTeX",
   "features": {
     "ghcr.io/prulloac/devcontainer-features/latex:1": {
@@ -113,7 +113,7 @@
 	//* This needs to be left as the command because the installation
 	//*   location varies across architecture builds
 	"latex-workshop.latexindent.exec.path": "latexindent",
-	"latex-workshop.latexindent.args": [
+	"latex-workshop.formatting.latexindent.args": [
 	  "-c",
 	  "%DIR%/",
 	  "%TMPFILE%",
