@@ -4,7 +4,7 @@
   "features": {
     "ghcr.io/prulloac/devcontainer-features/latex:1": {
       "scheme": "minimal",
-      "packages": "collection-fontsrecommended, collection-xetex, collection-langchinese, biber, latexindent"
+      "packages": "collection-fontsrecommended, collection-luatex, collection-langchinese, biber, latexindent"
     },
     "ghcr.io/meaningful-ooo/devcontainer-features/fish:2": {}
   },
@@ -36,18 +36,18 @@
 	"latex-workshop.latex.outDir": "%DIR%/output",
 	"latex-workshop.latex.recipes": [
 	  {
-	    "name": "xelatexmk",
+	    "name": "lualatexmk",
 	    "tools": [
-	      "xelatexmk"
+	      "lualatexmk"
 	    ]
 	  },
 	  {
-	    "name": "xelatex -> biber -> xelatex* 2",
+	    "name": "lualatex -> biber -> lualatex* 2",
 	    "tools": [
-	      "xelatex",
+	      "lualatex",
 	      "biber",
-	      "xelatex",
-	      "xelatex"
+	      "lualatex",
+	      "lualatex"
 	    ]
 	  },
 	  {
@@ -59,27 +59,27 @@
 	],
 	"latex-workshop.latex.tools": [
 	  {
-	    "name": "xelatex",
+	    "name": "lualatex",
 	    "command": "latexmk",
 	    "args": [
 	      "--shell-escape",
 	      "-synctex=1",
 	      "-interaction=nonstopmode",
 	      "-file-line-error",
-	      "-xelatex",
+	      "-lualatex",
 	      "-outdir=%OUTDIR%",
 	      "%DOC%"
 	    ]
 	  },
 	  {
-	    "name": "xelatexmk",
+	    "name": "lualatexmk",
 	    "command": "latexmk",
 	    "args": [
 	      "-synctex=1",
 	      "-interaction=nonstopmode",
 	      "-file-line-error",
 	      "-pdf",
-	      "-xelatex",
+	      "-lualatex",
 	      "-outdir=%OUTDIR%",
 	      "%DOC%"
 	    ]
@@ -151,6 +151,6 @@
     }
   },
   // install required fonts
-  "postStartCommand": "bash .devcontainer/postCreateCommand.sh",
+  "postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
   "remoteUser": "vscode"
 }

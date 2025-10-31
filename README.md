@@ -2,9 +2,9 @@
 
 [English version available here →](./README.en.md)
 
-本项目基于 `ghcr.io/jmuchovej/devcontainers/latex:2025` 构建，预装了 XeLaTeX 中文支持环境，包括：
+本项目基于 `ghcr.io/jmuchovej/devcontainers/latex:2025` 构建，预装了 LuaLaTeX 中文支持环境，包括：
 
-- ✅ XeTeX 引擎
+- ✅ LuaTeX 引擎
 - ✅ `ctex` 宏包（中文文档模板）
 - ✅ TeX Live 包管理器 `tlmgr`
 - ✅ 常用字体包（Noto Sans / Serif CJK SC, TeX Gyre）
@@ -69,6 +69,6 @@ README.md                  # 本说明文件
 
 ## 🧠 小贴士
 
-+ 中文建议使用 XeLaTeX 引擎
++ 中文建议使用 LuaLaTeX 引擎
 + 预装了 VSCode 插件 LaTeX Workshop 自动编译、查看 PDF、自动清理中间文件
 + 可通过 .latexmkrc 自定义构建逻辑和输出路径

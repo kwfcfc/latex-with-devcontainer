@@ -2,9 +2,9 @@
 
 [查看中文版 →](./README.md)
 
-This project is based on `ghcr.io/jmuchovej/devcontainers/latex:2025`, and comes preconfigured with XeLaTeX support for Chinese documents, including:
+This project is based on `ghcr.io/jmuchovej/devcontainers/latex:2025`, and comes preconfigured with LuaLaTeX support for Chinese documents, including:
 
-- ✅ XeTeX engine
+- ✅ LuaTeX engine
 - ✅ `ctex` package (for Chinese document templates)
 - ✅ TeX Live package manager `tlmgr`
 - ✅ Common font packages (Noto Sans / Serif CJK SC, TeX Gyre)
@@ -70,6 +70,6 @@ README.md                  # Chinese README fie
 
 ## 🧠 Tips
 
-+ It is recommended to use the **XeLaTeX** engine for Chinese typesetting.
++ It is recommended to use the **LuaLaTeX** engine for Chinese typesetting.
 + The **LaTeX Workshop** extension is pre-installed in VSCode for automatic compilation, PDF preview, and cleanup of intermediate files.
 + You can customize the build logic and output path via a `.latexmkrc` configuration file.
